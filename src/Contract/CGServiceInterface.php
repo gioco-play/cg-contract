@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 namespace GiocoPlus\CG\Contract;
+use http\Encoding\Stream\Inflate;
+
 /**
  * CG
  */
@@ -22,9 +24,10 @@ interface CGServiceInterface {
      * @param string $op_code
      * @param string $account
      * @param string $bet_id
+     * @param string $lang
      * @return mixed
      */
-    function gameDetail(string $op_code, string $account, string $bet_id);
+    function gameDetail(string $op_code, string $account, string $bet_id, string $lang);
 
     /**
      * 抓取遊戲紀錄
